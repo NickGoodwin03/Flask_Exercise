@@ -1,5 +1,17 @@
+{% block head %}
+    <style>
+        h2{
+            background-color: black;
+            color: white;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-
-
-
+    {% if even %}
+        <h2>{{number}} is Even</h2>
+    {% else %}
+        <h2>{{number}} is Odd</h2>
+    {% endif %}
+    <a href="http://127.0.0.1:5000">Go Home</a>
 {% endblock %}

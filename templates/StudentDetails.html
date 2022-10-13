@@ -1,9 +1,29 @@
+{% block head %}
+    <style>
+        .blue:nth-child(2){
+            background-color: lightblue;
+        }
+        table, th, td {
+            border: 1px solid;
+            width: 50%;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
 <h1>Student Details</h1>
 <table>
+    <TR>
+        <TH>Name</TH>
+        <TH>Organisation</TH>
+    </TR>
     {%for key,value in studentOrganisationDetails.items()%}
-
+    <TR>
+        <TD class="blue">{{key}}</TD>
+        <TD>{{value}}</TD>
+    </TR>
     {%endfor%}
 </table>
-
+<br>
+<a href="http://127.0.0.1:5000">Go Home</a>
 {% endblock %}

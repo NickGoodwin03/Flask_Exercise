@@ -1,3 +1,22 @@
-{% block content %}
+{% block head %}
+    <style>
+        
+        h1 {
+            background-color: gray;
+            color: white;
+            text-align: center;
+            font-size: 100px;
+        }
 
+        a {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>Current time is: {{currentDate}}</h1>
+    <br>
+    <a href="http://127.0.0.1:5000/calculate">Go to calculate</a>
+    <a href="http://127.0.0.1:5000/addStudentOrganisation">Go to student organisations</a>
 {% endblock %}
